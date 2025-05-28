@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var t = 'Hello Thank you good luck to you'
+
+         for (i in t) {
+            document.write(`(${i}:${t[i]})`)
+         }
+
+         document.write('<hr />')
+
+         //해당 인덱스 번호의 문자 출력
+         document.write(t.charAt(16), '<br />')
+
+         //문자열의 처음부터 해당 문자의 인덱스 번호를 찾음
+         document.write(t.indexOf('you'), '<br />')
+
+         //16번 문자열부터 해당 문자의 인덱스 번호를 찾음
+         document.write(t.indexOf('you', 16), '<br />')
+
+         document.write('<hr />')
+
+         //해당 문자열이 있는 인덱스 번호를 찾음
+         document.write(t.search('you', 16), '<br />')
+
+         //(시작 인덱스 번호, 끝 인덱스 번호 직전)까지 문자열을 절삭해 출력함
+         document.write(t.substring(6, 12), '<br />')
+
+         document.write('<hr />')
+
+         //원하는 문자열로 바꿔준다
+         document.write(t.replace('you', 'me'), '<br />')
+         document.write(t.length, '<br />')
+
+         document.write('<hr />')
+
+         // 특정 기준을 잡고 문자열을 잘라 배열로 저장함
+         var s = t.split(' ') // '공백' 기준
+         console.log(s)
+
+         var names = '철수/짱구/유리/맹구'
+         var s2 = names.split('/') // '/' 기준
+         console.log(s2)
+      </script>
+   </body>
+</html>

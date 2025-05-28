@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //비동기 사례: 순차적으로 실행되지 않음
+         //  console.log('Hello')
+
+         //  setTimeout(function () {
+         //     console.log('Bye')
+         //  }, 3000)
+
+         //  console.log('Hello agn')
+
+         //비동기를 동기로 바꾸는 법 = 콜백함수
+
+         function sayGoodbye(callback) {
+            setTimeout(function () {
+               //실제 동기적으로 실행되는 부분
+               console.log('Bye')
+               callback()
+            }, 3000)
+         }
+         console.log('Hello')
+
+         sayGoodbye(function () {
+            console.log('Hello agn')
+         })
+
+         //동기적인 부분과 상관 없음
+         console.log('hehe')
+      </script>
+   </body>
+</html>

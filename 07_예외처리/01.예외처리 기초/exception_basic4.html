@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //5개의 빈 배열 생성 [ , , , , ]
+         // const array = new Array(5)
+         // console.log(array)
+         try {
+            const array = new Array(34786527234786432678324687237)
+         } catch (error) {
+            console.log(error)
+            console.log('예외이름: ', error.name)
+            console.log('예외메세지: ', error.message)
+         }
+      </script>
+   </body>
+</html>

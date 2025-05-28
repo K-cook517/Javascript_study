@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //배열안의 숫자 중 최소값을 구하는 함수
+         function min(array) {
+            //변수명에서 min을 지정해 array를 만들고
+            let output = array[0] // output은 array 0번 칸
+            for (const item of array) {
+               //array의 요소를 반복해서 구함
+               if (output > item) {
+                  //만약(output이 요소(item)보다 크면)
+                  output = item //output은 요소가 됨
+               }
+            }
+            return output //다 끝나면 출력
+         }
+
+         const testArray = [52, 273, 32, 103, 275, 24, 57]
+         console.log(`최소값: ${min(testArray)}`)
+      </script>
+   </body>
+</html>

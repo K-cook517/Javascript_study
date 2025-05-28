@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //localStorage는 문자열밖에 저장 못한다. 객체나 배열은 문자열로 변환해서 저장.
+         //저장 용량은 약 5MB정도
+         //너무 자주 쓰면 성능에 영향 감
+         const me = {
+            name: '김동빈',
+            age: 25,
+            hobby: ['게임', '영화 감상', '유튜브 및 드라마 시청'],
+         }
+
+         localStorage.setItem('me', JSON.stringify(me)) //문자열 변환 후 저장
+
+         //불러오기
+         const savefile = JSON.parse(localStorage.getItem('me'))
+         console.log(savefile)
+         console.log(savefile.name)
+      </script>
+   </body>
+</html>

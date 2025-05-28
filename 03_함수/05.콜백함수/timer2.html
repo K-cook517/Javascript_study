@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         let id
+         let count = 0
+         id = setInterval(() => {
+            console.log(`1초마다 실행 ${count}회`)
+            count++
+         }, 1000)
+
+         //5초 뒤 setInterval 함수 중지
+         setTimeout(() => {
+            console.log(`타이머 종료.`)
+            clearInterval(id)
+         }, 5000)
+      </script>
+   </body>
+</html>
